@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.material-icons{
+	font-size: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon{
+	text-align: right;
+	margin: 60px;
+	cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cards-view {
+	width: 100%;
+	margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards-item-view {
+	background: #f5f5f5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2px;
+	padding: 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.item-img-view {
+	width: 100px;
+	height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-title-view {
+	font-size: 25px;
+}
+
+.item-price-view {
+color: red;
+}
+
+.item-btn-view {
+	border-radius: 15px;
+	width: 110px;
+	height: 30px;
+	color: red;
+	border: 1px solid red;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.cards-item {
+	width: 300px;
+	height: 300px;
+	margin: 50px;
+	text-align: center;
+}
+
+.item-header {
+	margin-bottom: -70px;
+	position: relative;
+}
+
+.item-title {
+font-size: 25px;
+}
+
+.item-img {
+	width: 100%;
+	height: 100%;
+}
+
+.item-coast {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: -50px;
+	color: red;
+}
+
+.item-btn {
+	border-radius: 15px;
+	width: 110px;
+	height: 30px;
+	color: red;
+	border: 1px solid red;
 }
