@@ -3,7 +3,8 @@ import IconSwitch from './IconSwitch';
 import CardsView from './CardsView';
 import ListView from './ListView';
 
-
+const module = 'view_list';
+const list = 'view_module';
 
 
 export default class Store extends React.Component {
@@ -12,44 +13,25 @@ export default class Store extends React.Component {
 		super(props)
 
 		this.state = {
-			selected: null
+			selected: module
 		}
 	}
 
-	onSwitch = (icon) => this.setState({ selected: icon.name })
-
-	icon = () => this.props.icons.filter(e => {
-		if (this.state.selected === null) {
-			return e.name === 'view_list'
-		} else if (this.state.selected === 'view_list') {
-			return e.name === 'view_module'
-		} else {
-			return e.name === 'view_list'
-		}
-	})
+	onSwitch = () => this.setState({ selected: this.state.selected === module ? list : module })
 
 
 	render() {
 
-		const renderCards = () => {
-			if (this.state.selected === null) {
-				return <ListView cards={this.props.products} />
-			} else if (this.state.selected === 'view_list') {
-				return <CardsView items={this.props.products} />
-			} else {
-				return <ListView cards={this.props.products} />
-			}
-		}
 
 		return (
 			<div className='wrapper'>
 				<div className='container'>
-					<IconSwitch icon={this.icon()} onSwitch={this.onSwitch} />
-					{renderCards()}
+					<IconSwitch icon={this.state.selected} onSwitch={this.onSwitch} />
+					{this.state.selected === module
+						? <ListView cards={this.props.products} />
+						: <CardsView items={this.props.products} />}
 				</div>
 			</div>
 		)
-
 	}
-
 }

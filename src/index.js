@@ -38,14 +38,9 @@ const products = [{
   img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
 }];
 
-const icons = [
-	{ name: 'view_list', key: 1 },
-	{ name: 'view_module', key: 2 }
-]
-
 ReactDOM.render(
   <React.StrictMode>
-    <App products={products} icons={icons}/>
+    <App products={products}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
