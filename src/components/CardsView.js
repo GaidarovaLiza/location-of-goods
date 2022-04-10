@@ -4,7 +4,7 @@ export default function CardsView(props) {
 
 	return (
 		<div className='cards-view'>
-			{props.items.map((card, i) =>
+			{props.cards.map((card, i) =>
 				<div className='cards-item-view' key={i}>
 					<img className='item-img-view' src={card.img} />
 					<div className='item-title-view'>{card.name}</div>

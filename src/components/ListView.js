@@ -4,7 +4,7 @@ export default function ListView(props) {
 
 	return (
 		<div className='cards'>
-			{props.cards.map((card, i) =>
+			{props.items.map((card, i) =>
 				<div className='cards-item' key={i}>
 					<div className='item-header'>
 						<div className='item-title'>{card.name}</div>
